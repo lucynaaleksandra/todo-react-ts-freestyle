@@ -1,21 +1,26 @@
 import React from 'react'
-import { Todo } from "../App"
+import { ToDo } from "../App"
+import './todoList.scss'
 
 type Props = {
-  items: Todo[]
+  items: ToDo[],
+  onDelete: (id: number) => void
 }
 
-const TodoList = ({
+const TodoList: React.FC<Props> = ({
   items,
+  onDelete
 }: Props) => {
-  console.log("TodoList", items)
+  // console.log("TodoList", items)
   return (
     <ul>
       {items.map(todo => (
         <li key={todo.id}>
-          <label style={{ textDecoration: todo.complete ? 'line-through' : undefined }}>
-            <input type='checkbox' />{todo.text}
-          </label>
+          {/* <label style={{ textDecoration: todo.complete ? 'line-through' : undefined }}> */}
+          <input type='checkbox' />
+          <span>{todo.text}</span>
+          {/* </label> */}
+          <button onClick={onDelete.bind(null, todo.id)}>Delete</button>
         </li>
       ))}
     </ul>

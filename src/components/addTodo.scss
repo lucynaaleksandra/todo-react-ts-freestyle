@@ -1,0 +1,14 @@
+form {
+  input[type="text"], 
+  button {
+    padding:.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  button {
+    margin-left: 1rem;
+    background: #282c34;
+    color: #61dafb;
+    cursor: pointer;
+  }
+}
