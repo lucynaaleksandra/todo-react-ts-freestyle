@@ -24,7 +24,6 @@ const App: React.FC = () => {
   }
 
   const deleteHandler = (todoId: number) => {
-    console.log("removed")
     setTodos(prevTodos => {
       return prevTodos.filter(todo => todo.id !== todoId)
     })

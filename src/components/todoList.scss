@@ -11,6 +11,14 @@ ul {
     input[type="checkbox"] {
       margin-right: 1rem;
     }
+
+    button {
+      margin-left: 1rem;
+      padding: .5rem 1rem;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
   }
 }
 

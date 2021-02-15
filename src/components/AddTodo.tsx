@@ -20,12 +20,12 @@ const AddTodo: FC<Props> = ({
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     onAdd(userInput)
-    // setUserInput("")
+    setUserInput("")
   }
 
   return (
     <form onSubmit={onSubmit}>
-      <input type="text" onChange={handleChange} />
+      <input type="text" value={userInput} onChange={handleChange} />
       <button type="submit">ADD</button>
     </form>
   )

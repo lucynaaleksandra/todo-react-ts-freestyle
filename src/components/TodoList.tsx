@@ -20,7 +20,9 @@ const TodoList: React.FC<Props> = ({
           <input type='checkbox' />
           <span>{todo.text}</span>
           {/* </label> */}
-          <button onClick={onDelete.bind(null, todo.id)}>Delete</button>
+          <button onClick={onDelete.bind(null, todo.id)}>
+            <i className="far fa-trash-alt"></i>
+          </button>
         </li>
       ))}
     </ul>
