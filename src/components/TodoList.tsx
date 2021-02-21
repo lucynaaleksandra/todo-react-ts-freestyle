@@ -1,28 +1,26 @@
 import React from 'react'
 import { ToDo } from "../App"
 import './todoList.scss'
+import Todo from "./Todo"
 
 type Props = {
   items: ToDo[],
-  onDelete: (id: number) => void
+  onDelete: (id: number) => void,
+  onChange: (todo: ToDo) => void,
 }
 
-const TodoList: React.FC<Props> = ({
+const TodoList = ({
   items,
-  onDelete
+  onDelete,
+  onChange,
 }: Props) => {
   // console.log("TodoList", items)
+
   return (
     <ul>
       {items.map(todo => (
         <li key={todo.id}>
-          {/* <label style={{ textDecoration: todo.complete ? 'line-through' : undefined }}> */}
-          <input type='checkbox' />
-          <span>{todo.text}</span>
-          {/* </label> */}
-          <button onClick={onDelete.bind(null, todo.id)}>
-            <i className="far fa-trash-alt"></i>
-          </button>
+          <Todo todo={todo} onDelete={onDelete} onChange={onChange} />
         </li>
       ))}
     </ul>
@@ -30,3 +28,5 @@ const TodoList: React.FC<Props> = ({
 }
 
 export default TodoList
+
+// style={{ textDecoration: todo.isComplete ? 'line-through' : undefined }}

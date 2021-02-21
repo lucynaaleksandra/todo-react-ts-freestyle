@@ -9,7 +9,6 @@ const AddTodo: FC<Props> = ({
   onAdd,
 }: Props) => {
   const [userInput, setUserInput] = useState("")
-  // const [clearInput, setClearInput] = useState("")
 
   const handleChange = (e: React.FormEvent) => {
     if ((e.target as HTMLInputElement).value) {
