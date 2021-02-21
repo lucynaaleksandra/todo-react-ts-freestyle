@@ -13,7 +13,7 @@ const App: React.FC = () => {
   // new state variable todos
   const [todos, setTodos] = useState<ToDo[]>([{
     id: 123,
-    text: "ASDF",
+    text: "Do some code",
     isComplete: false,
   }])
   // console.log("App:", todos)

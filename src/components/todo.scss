@@ -1,7 +1,11 @@
 .new-todo-container {
   display: flex;
   justify-content: space-between;
+
   & span:last-of-type {
     padding-left: 1rem;
+  }
+  .delete-btn {
+    font-size: 1rem;
   }
 }
