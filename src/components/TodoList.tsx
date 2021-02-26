@@ -1,12 +1,12 @@
 import React from 'react'
 import { ToDo } from "../App"
-import './todoList.scss'
 import Todo from "./Todo"
+import './todoList.scss'
 
 type Props = {
-  items: ToDo[],
-  onDelete: (id: number) => void,
-  onChange: (todo: ToDo) => void,
+  items: ToDo[]
+  onDelete: (id: number) => void
+  onChange: (todo: ToDo) => void
 }
 
 const TodoList = ({
@@ -20,7 +20,10 @@ const TodoList = ({
     <ul>
       {items.map(todo => (
         <li key={todo.id}>
-          <Todo todo={todo} onDelete={onDelete} onChange={onChange} />
+          <Todo
+            todo={todo}
+            onDelete={onDelete}
+            onChange={onChange} />
         </li>
       ))}
     </ul>

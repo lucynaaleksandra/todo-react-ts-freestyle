@@ -3,9 +3,9 @@ import { ToDo } from "../App"
 import './todo.scss'
 
 type Props = {
-  todo: ToDo,
-  onDelete: (id: number) => void,
-  onChange: (todo: ToDo) => void,
+  todo: ToDo
+  onDelete: (id: number) => void
+  onChange: (todo: ToDo) => void
 }
 
 const Todo: React.FC<Props> = ({
@@ -16,8 +16,8 @@ const Todo: React.FC<Props> = ({
 
   const {
     id,
-    isComplete,
     text,
+    isComplete,
   } = todo
 
   const handleCompleteTodo = (e: React.ChangeEvent) => {

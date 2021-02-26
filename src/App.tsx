@@ -4,9 +4,9 @@ import TodoList from './components/TodoList'
 import AddTodo from './components/AddTodo'
 
 export type ToDo = {
-  id: number;
-  text: string;
-  isComplete: boolean;
+  id: number
+  text: string
+  isComplete: boolean
 }
 
 const App: React.FC = () => {
@@ -52,7 +52,10 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <AddTodo onAdd={addTodoHandler} />
-      <TodoList items={todos} onDelete={deleteHandler} onChange={handleTodoCompleted} />
+      <TodoList
+        items={todos}
+        onDelete={deleteHandler}
+        onChange={handleTodoCompleted} />
     </div>
   );
 }
