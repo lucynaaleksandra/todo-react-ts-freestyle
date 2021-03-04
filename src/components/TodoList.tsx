@@ -31,5 +31,3 @@ const TodoList = ({
 }
 
 export default TodoList
-
-// style={{ textDecoration: todo.isComplete ? 'line-through' : undefined }}

@@ -5,10 +5,27 @@ form {
     font-size: 1rem;
   }
 
+  input[type="text"] {
+    border: 1px solid #757575;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: #948080;
+      font-size: 15px;
+    }    
+  }
+
   button {
     margin-left: 1rem;
-    background: #282c34;
-    color: #61dafb;
+    background: #757575;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #757575;
+    border-radius: 4px;
     cursor: pointer;
+
+    &:hover {
+      background: #7e7d7d;
+    }
   }
 }

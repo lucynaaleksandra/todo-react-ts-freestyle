@@ -25,8 +25,9 @@ const AddTodo: FC<Props> = ({
       <input
         type="text"
         value={userInput}
-        onChange={handleChange} />
-      <button type="submit">ADD</button>
+        onChange={handleChange}
+        placeholder="Add new todo" />
+      <button type="submit" disabled={!userInput}>ADD</button>
     </form>
   )
 }

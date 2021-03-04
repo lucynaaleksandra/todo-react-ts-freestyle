@@ -15,6 +15,11 @@ const App: React.FC = () => {
     id: 123,
     text: "Do some code",
     isComplete: false,
+  },
+  {
+    id: 124,
+    text: "Do some yoga",
+    isComplete: false,
   }])
   // console.log("App:", todos)
 
